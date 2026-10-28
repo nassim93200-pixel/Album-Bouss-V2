@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4efe6;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    letter-spacing: 3px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover {
+    color: tomato;
+}
+
+/* Contenu */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+}
+section, article, aside {
+    margin-bottom: 32px;
+}
+.intro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 4px;
+}
+
+/* Pochette + infos */
+.fiche {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.fiche img {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+.infos {
+    list-style: none;
+    padding: 0;
+}
+.infos li {
+    margin-bottom: 8px;
+}
+
+/* Titre mis en avant */
+article.featured {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+.featured h3 {
+    color: tomato;
+}
+
+/* Tracklist sur 2 colonnes */
+/* À SUPPRIMER */
+.tracklist ol { columns: 2; padding-left: 24px; }
+.tracklist li:nth-child(odd) { font-weight: bold; }
+.tracklist li {
+    margin-bottom: 6px;
+}
+.tracklist li:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* Bloc Écouter */
+aside {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+aside a {
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+aside a:hover {
+    background: #c0392b;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1b1b1b;
+    color: #fff;
+}
+
+/* Petits écrans */
+@media (max-width: 700px) {
+    .fiche {
+        flex-direction: column;
+    }
+    .tracklist ol {
+        columns: 1;
+    }
+        .piste {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .piste .lecteur {
+        flex-basis: auto;
+    }
+}/* Page où l'on se trouve dans le menu */
+nav a.actif {
+    color: tomato;
+    border-bottom: 2px solid tomato;
+}
+
+/* Bouton vers une autre page */
+.bouton {
+    display: inline-block;
+    background: #1b1b1b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.bouton:hover {
+    background: tomato;
+}
